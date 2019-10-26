@@ -1,5 +1,4 @@
 on:
-  issue_comment:
   schedule:
     - cron: 20 17 * * TUE
 name: Routine Reminder
