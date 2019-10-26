@@ -1,0 +1,48 @@
+on:
+  schedule:
+    - cron: 20 17 * * TUE
+name: Routine Reminder
+jobs:
+  routine-reminder:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: date-helper
+        id: date-helper
+        uses: ./.github/actions/date-helper
+      - name: Send Routine No. 1
+        uses: appleboy/discord-action@master
+        if: steps.date-helper.outputs.routine == 1
+        with:
+          webhook_id: ${{ secrets.WEBHOOK_ID }}
+          webhook_token: ${{ secrets.WEBHOOK_TOKEN }}
+          color: "#fcc200"
+          username: "Reminder"
+          message: "Routine 1"
+      - name: Send Routine No. 2
+        uses: appleboy/discord-action@master
+        if: steps.date-helper.outputs.routine == 2
+        with:
+          webhook_id: ${{ secrets.WEBHOOK_ID }}
+          webhook_token: ${{ secrets.WEBHOOK_TOKEN }}
+          color: "#fcc200"
+          username: "Reminder"
+          message: "Routine 2"
+      - name: Send Routine No. 3
+        uses: appleboy/discord-action@master
+        if: steps.date-helper.outputs.routine == 3
+        with:
+          webhook_id: ${{ secrets.WEBHOOK_ID }}
+          webhook_token: ${{ secrets.WEBHOOK_TOKEN }}
+          color: "#fcc200"
+          username: "Reminder"
+          message: "Routine 3"
+      - name: Send Routine No. 4
+        uses: appleboy/discord-action@master
+        if: steps.date-helper.outputs.routine == 4
+        with:
+          webhook_id: ${{ secrets.WEBHOOK_ID }}
+          webhook_token: ${{ secrets.WEBHOOK_TOKEN }}
+          color: "#fcc200"
+          username: "Reminder"
+          message: "Routine 4"
