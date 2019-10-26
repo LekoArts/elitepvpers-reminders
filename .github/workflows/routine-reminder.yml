@@ -1,4 +1,5 @@
 on:
+  issue_comment:
   schedule:
     - cron: 20 17 * * TUE
 name: Routine Reminder
@@ -14,17 +15,20 @@ jobs:
         uses: appleboy/discord-action@master
         if: steps.date-helper.outputs.routine == 1
         with:
-          webhook_id: ${{ secrets.WEBHOOK_ID }}
-          webhook_token: ${{ secrets.WEBHOOK_TOKEN }}
+          webhook_id: ${{ secrets.MEETING_INTERN_ID }}
+          webhook_token: ${{ secrets.MEETING_INTERN_TOKEN }}
           color: "#fcc200"
           username: "Reminder"
-          message: "Routine 1"
+          message: |
+            routine 1
+            line 2
+            line 3
       - name: Send Routine No. 2
         uses: appleboy/discord-action@master
         if: steps.date-helper.outputs.routine == 2
         with:
-          webhook_id: ${{ secrets.WEBHOOK_ID }}
-          webhook_token: ${{ secrets.WEBHOOK_TOKEN }}
+          webhook_id: ${{ secrets.MEETING_INTERN_ID }}
+          webhook_token: ${{ secrets.MEETING_INTERN_TOKEN }}
           color: "#fcc200"
           username: "Reminder"
           message: "Routine 2"
@@ -32,8 +36,8 @@ jobs:
         uses: appleboy/discord-action@master
         if: steps.date-helper.outputs.routine == 3
         with:
-          webhook_id: ${{ secrets.WEBHOOK_ID }}
-          webhook_token: ${{ secrets.WEBHOOK_TOKEN }}
+          webhook_id: ${{ secrets.MEETING_INTERN_ID }}
+          webhook_token: ${{ secrets.MEETING_INTERN_TOKEN }}
           color: "#fcc200"
           username: "Reminder"
           message: "Routine 3"
@@ -41,8 +45,8 @@ jobs:
         uses: appleboy/discord-action@master
         if: steps.date-helper.outputs.routine == 4
         with:
-          webhook_id: ${{ secrets.WEBHOOK_ID }}
-          webhook_token: ${{ secrets.WEBHOOK_TOKEN }}
+          webhook_id: ${{ secrets.MEETING_INTERN_ID }}
+          webhook_token: ${{ secrets.MEETING_INTERN_TOKEN }}
           color: "#fcc200"
           username: "Reminder"
           message: "Routine 4"
