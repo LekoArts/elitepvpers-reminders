@@ -15,7 +15,7 @@ jobs:
           color: "#fcc200"
           username: "Reminder"
           message: |
-            Der freundliche Bot, um an den Newsletter zu erinnern!
+            Der freundliche Bot sagt: Erinnerung an den Newsletter!
             
             Was hat sich am Progress Trello Board geändert? Welche Teamänderungen gab es?
             Neuigkeiten aus dem Forum oder besondere Community-Highlights?
