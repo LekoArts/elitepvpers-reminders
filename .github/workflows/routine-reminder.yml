@@ -1,4 +1,5 @@
 on:
+  push:
   schedule:
     - cron: 20 17 * * TUE
 name: Routine Reminder
@@ -16,7 +17,6 @@ jobs:
         with:
           webhook_id: ${{ secrets.MEETING_INTERN_ID }}
           webhook_token: ${{ secrets.MEETING_INTERN_TOKEN }}
-          color: "#fcc200"
           username: "Reminder"
           message: |
             Auswertung von Ausschreibungen und Umfragen
@@ -28,7 +28,6 @@ jobs:
         with:
           webhook_id: ${{ secrets.MEETING_INTERN_ID }}
           webhook_token: ${{ secrets.MEETING_INTERN_TOKEN }}
-          color: "#fcc200"
           username: "Reminder"
           message: |
             Auswertung von Ausschreibungen und Umfragen
@@ -43,7 +42,6 @@ jobs:
         with:
           webhook_id: ${{ secrets.MEETING_INTERN_ID }}
           webhook_token: ${{ secrets.MEETING_INTERN_TOKEN }}
-          color: "#fcc200"
           username: "Reminder"
           message: |
             Auswertung von Ausschreibungen und Umfragen
@@ -55,7 +53,6 @@ jobs:
         with:
           webhook_id: ${{ secrets.MEETING_INTERN_ID }}
           webhook_token: ${{ secrets.MEETING_INTERN_TOKEN }}
-          color: "#fcc200"
           username: "Reminder"
           message: |
             Auswertung von Ausschreibungen und Umfragen
