@@ -1,5 +1,4 @@
 on:
-  push:
   schedule:
     - cron: 20 17 * * TUE
 name: Routine Reminder
