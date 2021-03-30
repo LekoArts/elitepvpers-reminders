@@ -1,6 +1,6 @@
 on:
   schedule:
-    - cron: 20 17 * * TUE
+    - cron: 20 16 * * TUE
 name: Routine Reminder
 jobs:
   routine-reminder:
