@@ -1,0 +1,20 @@
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: 30 19 * * TUE
+name: Weekly q and a
+jobs:
+  weekly-news:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Weekly q and a
+        uses: appleboy/discord-action@master
+        with:
+          webhook_id: ${{ secrets.QANDA_ID }}
+          webhook_token: ${{ secrets.QANDA_TOKEN }}
+          username: "Weekly q and a"
+          message: |
+            Weekly q and a starts so slowly. If you have any questions, suggestions or other concerns now we can discuss them.
+            Of course you can always come to us with concerns.
+            @here
