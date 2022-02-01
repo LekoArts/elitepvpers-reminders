@@ -1,7 +1,7 @@
 on:
   workflow_dispatch:
   schedule:
-    - cron: 30 19 * * TUE
+    - cron: 30 18 * * TUE
 name: Weekly Q and A
 jobs:
   weekly-news:
@@ -14,7 +14,4 @@ jobs:
           webhook_id: ${{ secrets.QANDA_ID }}
           webhook_token: ${{ secrets.QANDA_TOKEN }}
           username: "Weekly Q&A"
-          message: |
-            Weekly Q&A starts soon. If you have any questions, suggestions or other concerns now we can discuss them.
-            Of course you can always come to us with any other issues you might have.
-            @here
+          message: Weekly Q&A starts soon, @here. If you have any questions, suggestions or other concerns we can discuss them now. Of course, you can always come to us with any other issues you might have.
