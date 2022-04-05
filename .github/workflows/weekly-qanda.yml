@@ -1,7 +1,7 @@
 on:
   workflow_dispatch:
   schedule:
-    - cron: 30 18 * * TUE
+    - cron: 30 17 * * TUE
 name: Weekly Q and A
 jobs:
   weekly-news:
