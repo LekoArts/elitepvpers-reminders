@@ -13,6 +13,6 @@ jobs:
         with:
           webhook_id: ${{ secrets.QANDA_ID }}
           webhook_token: ${{ secrets.QANDA_TOKEN }}
-          username: "Elitepvpers"
+          username: "elitepvpers"
           avatar_url: "https://i.epvpimg.com/rXjMd.png"
-          message: @here weekly Q&A starting soon. If you have any questions, suggestions or other concerns we can discuss them now. Reminder: You can always come to us with any other issues at any time.
+          message: "@here Weekly Q&A is starting soon. If you have any questions, suggestions or other concerns we can discuss them now. Reminder: You can always come to us with any other issues at any time."
